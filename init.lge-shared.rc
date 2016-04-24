@@ -335,10 +335,6 @@ service bugreport /system/bin/logwrapper /system/bin/dumpstate -d -v -o /storage
     disabled
     oneshot
 
-service bbset /system/bin/sh /system/etc/init.qcom.baseband.sh
-    class late_start
-    oneshot
-
 # WLAN
 service p2p_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \

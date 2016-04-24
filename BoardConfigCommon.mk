@@ -95,6 +95,10 @@ TARGET_NO_INITLOGO := true
 
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Set Device in init based on baseband
+TARGET_INIT_VENDOR_LIB := libinit_msm7x27a-common
+TARGET_LIBINIT_DEFINES_FILE := device/lge/msm7x27a-common/init/init_msm7x27a-common.c
+
 BOARD_SEPOLICY_DIRS := \
        device/lge/msm7x27a-common/sepolicy
 

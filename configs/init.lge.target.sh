@@ -33,34 +33,32 @@ device=`getprop ro.product.device`
 soc_hwid=`cat /sys/devices/system/soc/soc0/id` 2> /dev/null
 xres=`cat /sys/class/graphics/fb0/xres` 2> /dev/null
 case "$soc_hwid" in
-     "91" | "101" | "102" | "103" | "127" | "128" | "129" | "137" | "167" | "168" | "169" | "170")
-         case "$xres" in
-             "720")
-                setprop ro.sf.lcd_density 320
-                setprop debug.hwc.dynThreshold 1.88
-                ;;
-             *)
-                setprop ro.sf.lcd_density 240
-                setprop debug.hwc.dynThreshold 1.91
-                ;;
-         esac
-         ;;
-      "98" | "99" | "100")
-            setprop ro.sf.lcd_density 160
-            setprop debug.hwc.dynThreshold 1.91
-            ;;
+	"91" | "101" | "102" | "103" | "127" | "128" | "129" | "137" | "167" | "168" | "169" | "170")
+		case "$xres" in
+			"720")
+			setprop ro.sf.lcd_density 320
+			setprop debug.hwc.dynThreshold 1.88
+			;;
+			*)
+			setprop ro.sf.lcd_density 240
+			setprop debug.hwc.dynThreshold 1.91
+			;;
+		esac
+	;;
+	"98" | "99" | "100")
+		setprop ro.sf.lcd_density 160
+		setprop debug.hwc.dynThreshold 1.91
+	;;
 esac
 
 case $device in
-     "e610" | "e612" | "e615" | "m4")
-        setprop lpa.decode true
-    ;;
+	"e610" | "e612" | "e615" | "m4")
+	setprop lpa.decode true
 esac
 
 case $device in
-     "p700" | "p705" | "p708" | "p710" | "p714" | "u0" | "vee7")
-        setprop ro.sf.hwrotation 180
-        setprop lpa.decode false
-    ;;
+	"p700" | "p705" | "p708" | "u0")
+	setprop ro.sf.hwrotation 180
+	setprop lpa.decode false
 esac
 
