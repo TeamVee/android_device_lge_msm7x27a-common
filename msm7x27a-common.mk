@@ -127,14 +127,11 @@ PRODUCT_PACKAGES += \
 
 # Radio properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=LGEQualcommUiccRIL \
     ro.telephony.default_network=0 \
     ro.telephony.call_ring.multiple=0 \
     telephony.lteOnGsmDevice=0 \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
-    rild.libargs=-d/dev/smd0 \
     ril.subscription.types=NV,RUIM \
-    DEVICE_PROVISIONED=1 \
     persist.radio.apm_sim_not_pwdn=1
 
 # Qcom properties
@@ -150,9 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.fuse_sdcard=true \
-    audio.gapless.playback.disable=true \
-    ro.sys.fw.bg_apps_limit=20 \
-    ro.config.max_starting_bg=8
+    audio.gapless.playback.disable=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
