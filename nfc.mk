@@ -1,4 +1,6 @@
 # Copyright (C) 2014 The CyanogenMod Project
+# Copyright (c) 2015 The TeamHackLG Project
+# Copyright (c) 2016 The TeamVee-M4 Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# NFC permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
@@ -27,9 +30,9 @@ PRODUCT_PACKAGES += \
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/lge/msm7x27a-common/nfc/nfcee_access.xml
+    PRODUCT_COPY_FILES += device/lge/msm7x27a-common/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/lge/msm7x27a-common/nfc/nfcee_access_debug.xml
+    PRODUCT_COPY_FILES += device/lge/msm7x27a-common/nfc/nfcee_access_debug.xml:system/etc/nfcee_access.xml
 endif
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+
+PRODUCT_PROPERTY_OVERRIDES += ro.nfc.port="I2C"

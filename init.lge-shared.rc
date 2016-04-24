@@ -160,7 +160,6 @@ on post-fs-data
     mkdir /data/audio 0770 media audio
 
     # NFC
-    setprop ro.nfc.port "I2C"
     chmod 0600 /dev/pn544
     chown nfc nfc /dev/pn544
 
