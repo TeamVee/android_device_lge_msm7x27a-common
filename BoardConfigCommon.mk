@@ -95,6 +95,10 @@ TARGET_NO_INITLOGO := true
 
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Unified Device
+TARGET_UNIFIED_DEVICE := true
+TARGET_OTA_ASSERT_DEVICE := E610,E612,E617,P700,P705,P708,m4,u0
+
 # Set Device in init based on baseband
 TARGET_INIT_VENDOR_LIB := libinit_msm7x27a-common
 TARGET_LIBINIT_DEFINES_FILE := device/lge/msm7x27a-common/init/init_msm7x27a-common.c
