@@ -93,16 +93,31 @@ TARGET_LIBINIT_DEFINES_FILE := device/lge/msm7x27a-common/init/init_msm7x27a-com
 # Hardware
 BOARD_HARDWARE_CLASS := device/lge/msm7x27a-common/cmhw
 
+# SEPolicy
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS := \
        device/lge/msm7x27a-common/sepolicy
 
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
        device.te \
-       app.te \
+       file.te \
        file_contexts \
-       untrusted_app.te \
-       vold.te \
-       zygote.te
+       healthd.te \
+       init_shell.te \
+       kernel.te \
+       led_deamon.te \
+       location.te \
+       mediaserver.te \
+       mm-qcamerad.te \
+       property.te \
+       property_contexts \
+       sdcardd.te \
+       sensors.te \
+       system_app.te \
+       system_server.te \
+       ueventd.te \
+       vold.te
 
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
