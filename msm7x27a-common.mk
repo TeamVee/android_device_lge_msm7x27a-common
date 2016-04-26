@@ -170,7 +170,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 # ART
-PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dex2oat-filter="balanced" \
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter="balanced" \
     dalvik.vm.dex2oat-flags="--no-watch-dog" \
     dalvik.vm.image-dex2oat-filter="speed" \
     dalvik.vm.dex2oat-swap="false" \
@@ -185,7 +186,8 @@ PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dex2oat-filter="balanced" \
 PRODUCT_PACKAGES += Torch
 
 # WiFi
-PRODUCT_PACKAGES += libwpa_client \
+PRODUCT_PACKAGES += \
+    libwpa_client \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
