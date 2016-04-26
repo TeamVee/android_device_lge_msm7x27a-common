@@ -151,7 +151,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.fuse_sdcard=true \
     audio.gapless.playback.disable=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -181,6 +180,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-Xmx="48m" \
     dalvik.vm.heapgrowthlimit="52m" \
     dalvik.vm.heaptargetutilization="0.25"
+
+# Force Camera Portability API, since newer camera API isn't supported.
+PRODUCT_PROPERTY_OVERRIDES += camera2.portability.force_api="1"
 
 # Enable Torch
 PRODUCT_PACKAGES += Torch
