@@ -119,6 +119,20 @@ BOARD_SEPOLICY_UNION += \
        ueventd.te \
        vold.te
 
+# Enable Minikin text layout engine (will be the default soon)
+USE_MINIKIN := true
+
+# Use dlmalloc instead of jemalloc for mallocs on low-ram targets
+MALLOC_IMPL := dlmalloc
+
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+	WITH_DEXPREOPT := true
+endif
+
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
 BOARD_WLAN_DEVICE                := qcwcn
