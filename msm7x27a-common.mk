@@ -166,6 +166,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable Torch
 PRODUCT_PACKAGES += Torch
 
+# WiFi
+PRODUCT_PACKAGES += libwpa_client \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_BRAND := lge
