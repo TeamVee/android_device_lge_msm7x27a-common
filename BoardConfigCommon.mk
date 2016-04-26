@@ -102,10 +102,10 @@ TARGET_LIBINIT_DEFINES_FILE := device/lge/msm7x27a-common/init/init_msm7x27a-com
 # Hardware
 BOARD_HARDWARE_CLASS := device/lge/msm7x27a-common/cmhw
 
-BOARD_SEPOLICY_DIRS := \
+BOARD_SEPOLICY_DIRS += \
        device/lge/msm7x27a-common/sepolicy
 
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
        device.te \
        app.te \
        file_contexts \
