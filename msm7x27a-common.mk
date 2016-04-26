@@ -184,6 +184,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Force Camera Portability API, since newer camera API isn't supported.
 PRODUCT_PROPERTY_OVERRIDES += camera2.portability.force_api="1"
 
+# For applications to determine if they should turn off specific memory-intensive
+# features that work poorly on low-memory devices.
+PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram="true"
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.force_highendgfx="true"
+
+# Disable atlas services on low-ram targets
+PRODUCT_PROPERTY_OVERRIDES += config.disable_atlas="true"
+
 # Enable Torch
 PRODUCT_PACKAGES += Torch
 
