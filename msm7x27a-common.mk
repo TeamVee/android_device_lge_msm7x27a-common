@@ -172,14 +172,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-filter="balanced" \
     dalvik.vm.dex2oat-flags="--no-watch-dog" \
-    dalvik.vm.image-dex2oat-filter="speed" \
-    dalvik.vm.dex2oat-swap="false" \
-    dalvik.vm.dex2oat-Xms="8m" \
-    dalvik.vm.dex2oat-Xmx="96m" \
-    dalvik.vm.image-dex2oat-Xms="48m" \
-    dalvik.vm.image-dex2oat-Xmx="48m" \
-    dalvik.vm.heapgrowthlimit="52m" \
-    dalvik.vm.heaptargetutilization="0.25"
+    dalvik.vm.image-dex2oat-filter="speed"
 
 # Force Camera Portability API, since newer camera API isn't supported.
 PRODUCT_PROPERTY_OVERRIDES += camera2.portability.force_api="1"
