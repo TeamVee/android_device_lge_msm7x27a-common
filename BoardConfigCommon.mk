@@ -36,7 +36,6 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a9
-TARGET_CPU_SMP := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_KERNEL_SOURCE := kernel/lge/msm7x27a-common
@@ -62,23 +61,15 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 # QCOM  display stuffs
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
-TARGET_QCOM_DISPLAY_VARIANT := caf
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_QCOM_BSP := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 
-# Media 
-TARGET_QCOM_MEDIA_VARIANT := caf
-
-# Add QC Video Enhancements flag
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-
 # bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
 # audio 
-TARGET_QCOM_AUDIO_VARIANT := caf
 BOARD_USES_LEGACY_ALSA_AUDIO := true
 TARGET_HAS_QACT := true
 
