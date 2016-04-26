@@ -177,6 +177,9 @@ on post-fs-data
 on boot
     start qcamerasvr
 
+    # CMHW Permission
+    chmod 0777 /sys/class/timed_output/vibrator/voltage
+
     # bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type

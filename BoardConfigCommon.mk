@@ -103,6 +103,9 @@ TARGET_OTA_ASSERT_DEVICE := E610,E612,E617,P700,P705,P708,m4,u0
 TARGET_INIT_VENDOR_LIB := libinit_msm7x27a-common
 TARGET_LIBINIT_DEFINES_FILE := device/lge/msm7x27a-common/init/init_msm7x27a-common.c
 
+# Hardware
+BOARD_HARDWARE_CLASS := device/lge/msm7x27a-common/cmhw
+
 BOARD_SEPOLICY_DIRS := \
        device/lge/msm7x27a-common/sepolicy
 
