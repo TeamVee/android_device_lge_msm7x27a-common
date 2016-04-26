@@ -316,7 +316,7 @@ on property:ro.boot.emmc=true
     start rmt_storage
 
 service sensord /system/bin/sensord
-    class core
+    class main
     oneshot
 
 # Triggered by the KEY_VOLUME_DOWN+KEY_MENU keycodes
@@ -400,12 +400,12 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     oneshot
 
 service qmuxd /system/bin/qmuxd
-    class core
+    class main
     user radio
     group radio audio bluetooth gps qcom_diag
 
 service netmgrd /system/bin/netmgrd
-    class core
+    class main
 
 service charger /charger
     class charger
