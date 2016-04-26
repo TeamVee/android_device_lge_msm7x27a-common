@@ -143,6 +143,9 @@ endif
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Charger
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
 BOARD_WLAN_DEVICE                := qcwcn
