@@ -206,3 +206,6 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Stlport
+PRODUCT_PACKAGES +=  libstlport
