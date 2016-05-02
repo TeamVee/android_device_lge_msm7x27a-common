@@ -12,18 +12,18 @@ Change-Id: I8f32b5bbfea33d732320b3ac29da6b0027fbd521
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/linker/linker.cpp b/linker/linker.cpp
-index 54867dc..36add53 100644
+index bc40cf1..89b718c 100644
 --- a/linker/linker.cpp
 +++ b/linker/linker.cpp
-@@ -2178,7 +2178,7 @@ bool soinfo::LinkImage(const android_dlextinfo* extinfo) {
-   if (has_text_relocations) {
+@@ -3023,7 +3023,7 @@ bool soinfo::link_image(const soinfo_list_t& global_group, const soinfo_list_t&
+ #endif
      // Make segments writable to allow text relocations to work properly. We will later call
      // phdr_table_protect_segments() after all of them are applied and all constructors are run.
 -    DL_WARN("%s has text relocations. This is wasting memory and prevents "
 +    DEBUG("%s has text relocations. This is wasting memory and prevents "
-             "security hardening. Please fix.", name);
+             "security hardening. Please fix.", get_realpath());
      if (phdr_table_unprotect_segments(phdr, phnum, load_bias) < 0) {
        DL_ERR("can't unprotect loadable segments for \"%s\": %s",
 -- 
-2.1.4
+1.9.1
 
