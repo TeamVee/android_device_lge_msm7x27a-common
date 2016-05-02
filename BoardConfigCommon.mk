@@ -109,26 +109,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
        device/lge/msm7x27a-common/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-       device.te \
-       file.te \
-       file_contexts \
-       healthd.te \
-       init_shell.te \
-       kernel.te \
-       led_deamon.te \
-       location.te \
-       mediaserver.te \
-       mm-qcamerad.te \
-       property.te \
-       property_contexts \
-       sdcardd.te \
-       sensors.te \
-       system_app.te \
-       system_server.te \
-       ueventd.te \
-       vold.te
-
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
