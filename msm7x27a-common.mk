@@ -159,10 +159,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=false
 endif
 
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # Use Hardware Rendering
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1
