@@ -109,6 +109,12 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
        device/lge/msm7x27a-common/sepolicy
 
+# RIL
+BOARD_RIL_CLASS += ../../../device/lge/msm7x27a-common/ril
+TARGET_RIL_VARIANT := legacy
+COMMON_GLOBAL_CFLAGS += -DRIL_SUPPORTS_SEEK
+COMMON_GLOBAL_CFLAGS += -DRIL_VARIANT_LEGACY
+
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
