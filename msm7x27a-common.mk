@@ -197,6 +197,9 @@ PRODUCT_PROPERTY_OVERRIDES += config.disable_atlas="true"
 # Enable Torch
 PRODUCT_PACKAGES += Torch
 
+# Google Keyboard
+PRODUCT_PACKAGES += GoogleLatinIME
+
 # WiFi
 PRODUCT_PACKAGES += \
     libwpa_client \
