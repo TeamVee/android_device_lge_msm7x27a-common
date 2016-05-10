@@ -185,6 +185,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags="--no-watch-dog" \
     dalvik.vm.image-dex2oat-filter="speed"
 
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
+$(call add-product-dex-preopt-module-config,services,--compiler-filter=space)
+
 # Force Camera Portability API, since newer camera API isn't supported.
 PRODUCT_PROPERTY_OVERRIDES += camera2.portability.force_api="1"
 
