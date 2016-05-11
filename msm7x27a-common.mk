@@ -137,7 +137,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.telephony.ril_class=JSRQualcommRIL \
-    ro.telephony.ril.config=skippinpukcount,simactivation
+    ro.telephony.ril.config=qcomdsds,skippinpukcount,simactivation
 
 # Qcom properties
 PRODUCT_PROPERTY_OVERRIDES += \
