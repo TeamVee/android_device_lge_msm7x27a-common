@@ -54,6 +54,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wlan/firmware/WCN1314_qcom_cfg.ini:system/etc/firmware/wlan/volans/WCN1314_qcom_cfg.ini
 endif
 
+# Use Prebuilt Google LatinIME
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/app/com.google.android.inputmethod.latin_4.1.23163.2622203.apk:system/app/LatinIME/LatinIME.apk
+
 # Permission files
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
