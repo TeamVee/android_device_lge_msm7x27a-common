@@ -69,26 +69,30 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
-# display HALS
+# Display HAL
 PRODUCT_PACKAGES += \
     gralloc.msm7x27a \
     copybit.msm7x27a \
     libqdMetaData \
     memtrack.msm7x27a
 
-# off-mode charging
+# Off-mode Charging
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# Omx
+# Media HAL
 PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore \
     libstagefrighthw \
-    libdashplayer
+    libdashplayer \
+    qcmediaplayer
 
-# Gps hal
+PRODUCT_BOOT_JARS += \
+    qcmediaplayer
+
+# GPS HAL
 PRODUCT_PACKAGES += \
     gps.msm7x27a
 
@@ -100,28 +104,34 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm7x27a
 
-# Filesystem management tools
+# EXT4
 PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
     setup_fs
 
-# Misc
+# Usb
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# audio 
+# Audio HAL
 PRODUCT_PACKAGES += \
     libaudioutils \
     audio.a2dp.default \
     audio.usb.default \
+    audio.r_submix.default \
     audio.primary.msm7x27a \
     audio_policy.msm7x27a \
+    libaudioparameter \
     libaudio-resampler
 
-# light hal
+# Light HAL
 PRODUCT_PACKAGES += \
     lights.msm7x27a
+
+# BT HAL
+PRODUCT_PACKAGES += \
+    libbt-vendor
 
 # Radio properties
 PRODUCT_PROPERTY_OVERRIDES += \
