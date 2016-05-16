@@ -95,11 +95,7 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore \
     libstagefrighthw \
-    libdashplayer \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+    libdashplayer
 
 # GPS HAL
 PRODUCT_PACKAGES += \
