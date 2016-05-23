@@ -187,7 +187,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-filter="balanced" \
-    dalvik.vm.dex2oat-flags="--no-watch-dog" \
+    dalvik.vm.dex2oat-swap="false" \
     dalvik.vm.image-dex2oat-filter="speed"
 
 PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
