@@ -94,8 +94,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore \
-    libstagefrighthw \
-    libdashplayer
+    libstagefrighthw
 
 # GPS HAL
 PRODUCT_PACKAGES += \
