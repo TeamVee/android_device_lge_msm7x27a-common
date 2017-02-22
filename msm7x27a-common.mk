@@ -182,5 +182,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
 
-# Enable Torch
-PRODUCT_PACKAGES += Torch
+ PRODUCT_PROPERTY_OVERRIDES += \
+     ro.sys.fw.bg_apps_limit=10 \
+     ro.config.max_starting_bg=6
